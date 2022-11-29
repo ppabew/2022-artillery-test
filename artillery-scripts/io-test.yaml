@@ -1,0 +1,13 @@
+config:
+  payload:
+    path: "../csv/ratings_test_1k.csv"
+    fields:
+      - "content"
+  target: http://128.134.244.183:8084
+scenarios:
+  - name: "just get hash"
+    flow:
+      - post:
+          url: "/io/post"
+          json:
+            content: "{{ content }}"
