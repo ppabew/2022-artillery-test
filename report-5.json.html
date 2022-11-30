@@ -1,4 +1,53 @@
-{
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Artillery report</title>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min.js' charset='utf-8'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.6.0/metricsgraphics.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.6.0/metricsgraphics.min.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js" charset="utf-8"></script>
+
+  <style>
+  body, p, li {
+    font-family: sans-serif;
+    font-size: 10pt;
+  }
+
+  h1 {
+    font-size: 18pt;
+    font-weight: bold;
+  }
+
+  #errorsContainer > p {
+    color: #009900;
+  }
+
+  #footer {
+    padding: 1em;
+    font-size: 0.8em;
+    color: #999;
+    text-align: center;
+    margin-top: 1em;
+    background-color: #eee;
+  }
+  #editor {
+    font-size: 8pt;
+    height: 20em;
+  }
+  </style>
+
+  <script>
+  window.Report = {
   "aggregate": {
     "timestamp": "2022-11-30T01:09:55.416Z",
     "scenariosCreated": 999,
@@ -73,37 +122,6 @@
         "200": 29
       },
       "matches": 0,
-      "latencies": [
-        105709417,
-        31577166,
-        33418084,
-        36358458,
-        32884250,
-        26873458,
-        39199125,
-        32459792,
-        34072541,
-        27350875,
-        34184542,
-        35574750,
-        30714125,
-        32352209,
-        32000042,
-        51790708,
-        32061834,
-        29995833,
-        32777500,
-        28775625,
-        29045166,
-        40268125,
-        37194125,
-        28401334,
-        29805584,
-        30769542,
-        33831708,
-        33136292,
-        31096875
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 0,
@@ -141,38 +159,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        30703084,
-        30880375,
-        37739792,
-        38998458,
-        30122541,
-        26945292,
-        31205958,
-        31750834,
-        36698000,
-        31391000,
-        31484500,
-        33718417,
-        37038542,
-        31413750,
-        33262833,
-        31722334,
-        29577500,
-        29167334,
-        38197417,
-        30879625,
-        30456666,
-        32649792,
-        30646459,
-        30786083,
-        30311709,
-        238467833,
-        33105583,
-        36363166,
-        33503334,
-        38959375
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 0,
@@ -210,38 +196,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        37420500,
-        31941833,
-        32238292,
-        38832708,
-        30932833,
-        32138667,
-        31785167,
-        30208291,
-        35761000,
-        32635875,
-        31598917,
-        35582334,
-        31053125,
-        32146625,
-        32225875,
-        45886416,
-        28307000,
-        36732208,
-        31524917,
-        26304542,
-        35602583,
-        37839042,
-        31907084,
-        29874125,
-        31063000,
-        33449750,
-        30729666,
-        33588250,
-        30609333,
-        37085708
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 0,
@@ -279,38 +233,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        36591667,
-        28934667,
-        29274833,
-        36724667,
-        27047500,
-        30438417,
-        40565583,
-        32070292,
-        30528750,
-        30673084,
-        29901041,
-        32566041,
-        33104334,
-        32841750,
-        33881334,
-        45040333,
-        28575208,
-        29810208,
-        33735917,
-        28691375,
-        34799000,
-        39963959,
-        32886125,
-        41352209,
-        33813333,
-        30204000,
-        32082584,
-        32000125,
-        32143916,
-        31114916
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 0,
@@ -348,38 +270,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        38575458,
-        30241042,
-        33993833,
-        37589709,
-        28578083,
-        33728209,
-        29690416,
-        32259083,
-        30736375,
-        41990333,
-        35314708,
-        31835583,
-        36088250,
-        39301792,
-        31632375,
-        48440833,
-        31995292,
-        28516333,
-        31477833,
-        30621875,
-        41041708,
-        31157375,
-        30285292,
-        29399875,
-        29653875,
-        29838375,
-        38921084,
-        45030292,
-        39346792,
-        31848083
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 0,
@@ -417,38 +307,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        33475750,
-        35625958,
-        29699792,
-        30687333,
-        35289333,
-        35412334,
-        28804459,
-        31999125,
-        30276417,
-        60649708,
-        33849459,
-        33506584,
-        37137583,
-        34155250,
-        32801542,
-        60873083,
-        42264291,
-        35881500,
-        41611584,
-        28152625,
-        31037083,
-        36790292,
-        32148375,
-        33344125,
-        29899458,
-        37012125,
-        28944292,
-        35576959,
-        28858334,
-        29296750
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 0,
@@ -486,38 +344,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        36806792,
-        29868333,
-        33060542,
-        32612792,
-        28804208,
-        39671375,
-        38298000,
-        30602333,
-        38429541,
-        41013958,
-        35211208,
-        37434667,
-        35414750,
-        28445708,
-        33270666,
-        33882459,
-        35123375,
-        30207875,
-        48348083,
-        69360833,
-        35686292,
-        37377667,
-        37707333,
-        35357500,
-        37779917,
-        37760084,
-        34480917,
-        30808833,
-        33491917,
-        37651250
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 0,
@@ -555,38 +381,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        31149334,
-        32700791,
-        35635417,
-        77398583,
-        28041333,
-        29403459,
-        46702834,
-        30256333,
-        31501291,
-        33831958,
-        34391042,
-        32460834,
-        35433584,
-        29746708,
-        35311083,
-        44524667,
-        33536500,
-        37585708,
-        29795834,
-        28227250,
-        34792250,
-        53969958,
-        42469875,
-        49002208,
-        32683250,
-        40227708,
-        45643333,
-        40615292,
-        34465417,
-        38039833
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 0,
@@ -624,38 +418,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        58720417,
-        38248792,
-        33683167,
-        32118666,
-        34769959,
-        35159125,
-        31510917,
-        30949458,
-        31878125,
-        32248084,
-        36317167,
-        50440208,
-        37195958,
-        97940000,
-        40441625,
-        48695500,
-        39386541,
-        41071583,
-        34383084,
-        30233500,
-        30459625,
-        34866667,
-        29429625,
-        39427458,
-        30157958,
-        29683667,
-        46832500,
-        31614500,
-        31493375,
-        27384083
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 0,
@@ -693,38 +455,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        39746750,
-        28355625,
-        27351375,
-        38258209,
-        39563042,
-        38769125,
-        32963833,
-        30715667,
-        31178000,
-        45098458,
-        29972041,
-        32008041,
-        38437792,
-        35647458,
-        34858333,
-        45269500,
-        33559167,
-        34841000,
-        31095208,
-        28711458,
-        29920500,
-        43677917,
-        26930208,
-        29032584,
-        31457834,
-        31060166,
-        33885625,
-        32560667,
-        39812166,
-        30848083
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 0,
@@ -762,38 +492,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        62958083,
-        32498750,
-        29195000,
-        33459292,
-        30912708,
-        31881208,
-        34327708,
-        32193125,
-        35371750,
-        35101500,
-        30825625,
-        33527041,
-        31562500,
-        30072000,
-        41855459,
-        30632916,
-        33076167,
-        32129333,
-        32732917,
-        29248833,
-        34286042,
-        31364375,
-        32678667,
-        27975083,
-        32436541,
-        30641042,
-        33157125,
-        33472542,
-        32046875,
-        36742458
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 0,
@@ -831,38 +529,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        28543875,
-        31741917,
-        29423250,
-        31947208,
-        30852125,
-        30189792,
-        31350875,
-        37635125,
-        41507208,
-        36631041,
-        29339833,
-        32249584,
-        30397333,
-        31803333,
-        32356667,
-        31890083,
-        32679959,
-        37325958,
-        45489208,
-        29198959,
-        36197375,
-        35013708,
-        29937791,
-        28563750,
-        31600209,
-        30679542,
-        37104416,
-        36503208,
-        34453042,
-        34923417
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -900,38 +566,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        31404666,
-        32630334,
-        50520417,
-        40890209,
-        34292958,
-        37358625,
-        36639500,
-        33040750,
-        28459958,
-        41939792,
-        39721625,
-        30976708,
-        30628500,
-        29375417,
-        30620042,
-        32786375,
-        31043875,
-        31782250,
-        30578250,
-        29796792,
-        29576292,
-        29358583,
-        34006500,
-        32191708,
-        31251083,
-        39255459,
-        39315875,
-        35381417,
-        30082875,
-        33163791
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -969,38 +603,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        34569750,
-        39007791,
-        33319250,
-        33412041,
-        30523042,
-        30302459,
-        33596416,
-        29175041,
-        36194167,
-        31430125,
-        34361333,
-        30396625,
-        30031375,
-        31213333,
-        32804458,
-        26950875,
-        31167083,
-        32280125,
-        34032041,
-        30765750,
-        30678500,
-        31711458,
-        30762084,
-        30126959,
-        37728542,
-        33804000,
-        40759208,
-        27839625,
-        37227000,
-        33441875
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1038,38 +640,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        34864500,
-        38204084,
-        28384625,
-        28654667,
-        37742666,
-        32437334,
-        31322000,
-        29396292,
-        29275416,
-        33534458,
-        31800792,
-        30384458,
-        29504583,
-        33640458,
-        30628541,
-        31295583,
-        30002000,
-        26361875,
-        29299417,
-        37099958,
-        34454250,
-        28282667,
-        33585000,
-        30603416,
-        32707792,
-        28491583,
-        38914542,
-        34639167,
-        29360292,
-        29860958
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1107,38 +677,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        34233375,
-        34172125,
-        30688333,
-        31756291,
-        29613042,
-        31031083,
-        26256500,
-        29766000,
-        28562333,
-        28641500,
-        34391458,
-        31632375,
-        36280625,
-        27388250,
-        33613666,
-        29335792,
-        27277375,
-        36748833,
-        31566125,
-        29207042,
-        52525459,
-        31642791,
-        28953083,
-        25056083,
-        30086667,
-        33816083,
-        31431584,
-        29581208,
-        29079542,
-        36810375
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1176,38 +714,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        29924833,
-        32825541,
-        38868041,
-        41468541,
-        31480000,
-        30653458,
-        33597625,
-        34319542,
-        30289458,
-        32948000,
-        29134208,
-        31093041,
-        33873833,
-        32479042,
-        31250708,
-        31930750,
-        29058833,
-        33175750,
-        30812875,
-        30909000,
-        26370209,
-        32644875,
-        26672708,
-        31211209,
-        30541750,
-        29078625,
-        36388458,
-        31910542,
-        32255375,
-        39826667
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1245,38 +751,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        37217875,
-        31917708,
-        31926375,
-        33809292,
-        36623750,
-        36902709,
-        32470458,
-        32305458,
-        30452167,
-        29115750,
-        30952458,
-        32341042,
-        32628542,
-        86474541,
-        30727291,
-        32141875,
-        32269000,
-        31211292,
-        31026417,
-        46410125,
-        29576625,
-        32966916,
-        32904666,
-        30000250,
-        30941834,
-        38919084,
-        28356000,
-        29503792,
-        29370834,
-        35031459
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1314,38 +788,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        32324208,
-        30220416,
-        35586083,
-        28896834,
-        28933542,
-        28383375,
-        35172125,
-        26794583,
-        28990500,
-        32688500,
-        27813000,
-        28735708,
-        27673042,
-        31200708,
-        29607541,
-        30161208,
-        31444250,
-        37261875,
-        27476666,
-        37147791,
-        56771250,
-        30964209,
-        30152667,
-        29592250,
-        29649125,
-        29214500,
-        32149166,
-        29928292,
-        28205584,
-        28970084
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1383,38 +825,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        35585834,
-        28845000,
-        38090916,
-        30337625,
-        27484292,
-        28838000,
-        29856334,
-        41113666,
-        31271542,
-        29180458,
-        36018542,
-        33535709,
-        31418209,
-        27766500,
-        30737000,
-        33079584,
-        30702167,
-        31888834,
-        42372083,
-        31423458,
-        38269625,
-        31535583,
-        31401916,
-        35469042,
-        28213459,
-        35696000,
-        38918375,
-        42603541,
-        40969500,
-        33725458
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1452,38 +862,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        39903208,
-        29280542,
-        29629959,
-        34491875,
-        33557542,
-        29399542,
-        33507667,
-        30518208,
-        32159375,
-        28321333,
-        35224792,
-        31012000,
-        31843291,
-        32306500,
-        30642375,
-        45289917,
-        32222791,
-        33957209,
-        31618959,
-        32979250,
-        26648917,
-        29939084,
-        31606125,
-        34037000,
-        29687917,
-        33967333,
-        31394750,
-        40997458,
-        39609792,
-        28878916
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1521,38 +899,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        36527958,
-        34276084,
-        38436083,
-        34437833,
-        32878083,
-        29546667,
-        24514042,
-        33824292,
-        29123292,
-        31258500,
-        33484417,
-        34225625,
-        29147875,
-        33360333,
-        29378916,
-        36541250,
-        39889375,
-        29030375,
-        31208125,
-        28709292,
-        32666959,
-        29052916,
-        32487625,
-        35913667,
-        35743250,
-        35267500,
-        43094000,
-        44063125,
-        35612292,
-        31993125
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1590,38 +936,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        30848083,
-        32164708,
-        31380375,
-        24429792,
-        28194708,
-        32343375,
-        29473292,
-        37612750,
-        25300583,
-        34380708,
-        30352125,
-        33490625,
-        27845750,
-        30773375,
-        33435250,
-        34258667,
-        27249458,
-        31093041,
-        32712208,
-        29257667,
-        28132334,
-        31189958,
-        29314917,
-        33364584,
-        29138083,
-        33720833,
-        29431500,
-        29061292,
-        31686750,
-        32960625
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1659,38 +973,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        34996583,
-        30847167,
-        30723375,
-        33258125,
-        29524834,
-        29154750,
-        32776791,
-        30706917,
-        28584084,
-        33898834,
-        30593333,
-        30172750,
-        28250208,
-        35953084,
-        31836083,
-        37383667,
-        28253000,
-        33608042,
-        30636541,
-        25830583,
-        32204125,
-        30974917,
-        30019875,
-        27894000,
-        27230292,
-        31515708,
-        31925666,
-        31666500,
-        38664000,
-        31522416
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1728,38 +1010,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        29483584,
-        30651375,
-        33150417,
-        29929875,
-        33236250,
-        31616583,
-        29592917,
-        31242667,
-        27998166,
-        28919750,
-        31209833,
-        30887000,
-        27334958,
-        33893917,
-        32829416,
-        27476042,
-        29482875,
-        33489917,
-        26647750,
-        33218916,
-        30744125,
-        28906542,
-        32796375,
-        33712959,
-        27735958,
-        30293000,
-        29655334,
-        34301625,
-        29214417,
-        30127708
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1797,38 +1047,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        31305250,
-        30205041,
-        28631375,
-        31705041,
-        32052584,
-        28757250,
-        27476459,
-        31541750,
-        30563375,
-        27192375,
-        33885209,
-        31860583,
-        26284166,
-        31635791,
-        38242709,
-        39340000,
-        25819167,
-        37513125,
-        30357625,
-        34246875,
-        28094917,
-        40315958,
-        28871333,
-        33756167,
-        32377333,
-        31394709,
-        34106916,
-        33095959,
-        29362333,
-        29930834
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1866,38 +1084,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        42818167,
-        30767375,
-        29371667,
-        32006625,
-        28087208,
-        31439916,
-        35090458,
-        30125625,
-        33431750,
-        36199875,
-        32471209,
-        29231250,
-        57808666,
-        69823542,
-        28581250,
-        28287125,
-        31761625,
-        27489708,
-        26942542,
-        30347750,
-        31779000,
-        30129083,
-        34564667,
-        40371375,
-        34444000,
-        30983833,
-        29044708,
-        31395000,
-        31272250,
-        30367916
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -1935,38 +1121,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        34644291,
-        36006666,
-        31998833,
-        27058250,
-        29110958,
-        30538292,
-        36351792,
-        32387000,
-        33010917,
-        28774917,
-        29998792,
-        30194208,
-        27594458,
-        33463292,
-        32499292,
-        27931334,
-        31056792,
-        30707000,
-        27587834,
-        33836041,
-        33220375,
-        28235000,
-        32975000,
-        25285333,
-        31291125,
-        33527042,
-        30663208,
-        29741250,
-        35036292,
-        27444125
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -2004,38 +1158,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        31755458,
-        33277708,
-        30996708,
-        34200375,
-        30555875,
-        27679750,
-        27925583,
-        30028458,
-        31931750,
-        29263417,
-        36274542,
-        32637583,
-        30900042,
-        29175375,
-        29295625,
-        29734667,
-        31737625,
-        28724125,
-        29300042,
-        30435708,
-        32398333,
-        33408250,
-        30867375,
-        31914666,
-        32188084,
-        30944583,
-        30505750,
-        37423375,
-        26623542,
-        34317833
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -2073,38 +1195,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        43451042,
-        38566416,
-        28651917,
-        31731291,
-        29531334,
-        31950375,
-        32348625,
-        29414791,
-        33051042,
-        34483333,
-        32817333,
-        37811917,
-        29714291,
-        33414667,
-        30949375,
-        29135375,
-        27935250,
-        31041708,
-        32388042,
-        31552708,
-        29497334,
-        30608083,
-        41080625,
-        33973208,
-        35765125,
-        30064458,
-        27700250,
-        31931208,
-        33264333,
-        34595208
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -2142,38 +1232,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        33068709,
-        36639500,
-        35613875,
-        31037000,
-        26473834,
-        27817250,
-        26461375,
-        27265875,
-        28935709,
-        29790875,
-        32159959,
-        37187708,
-        29413417,
-        36094875,
-        29373500,
-        28430250,
-        32080916,
-        32851750,
-        33663750,
-        29090417,
-        29329917,
-        33761833,
-        34550250,
-        26346583,
-        32764500,
-        29950000,
-        35270167,
-        30813042,
-        34692209,
-        29425958
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -2211,38 +1269,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        28650333,
-        28898042,
-        29350750,
-        33587834,
-        29689625,
-        29893584,
-        29782167,
-        31600875,
-        31177667,
-        30788542,
-        29735542,
-        33125667,
-        28677292,
-        28680083,
-        30321583,
-        32679791,
-        30509792,
-        34857583,
-        30037125,
-        32337667,
-        33345750,
-        33863500,
-        33764083,
-        30843750,
-        30197750,
-        34172958,
-        28864166,
-        32251083,
-        32660375,
-        32420458
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -2280,38 +1306,6 @@
         "200": 30
       },
       "matches": 0,
-      "latencies": [
-        31019000,
-        34216459,
-        32849542,
-        32739666,
-        29971917,
-        29794250,
-        29886292,
-        27473041,
-        31605750,
-        29566041,
-        31036458,
-        29157250,
-        30893083,
-        27320083,
-        35015167,
-        38570292,
-        33069208,
-        28826125,
-        26192458,
-        32960750,
-        32627166,
-        32708917,
-        32162542,
-        32513292,
-        24130625,
-        33281250,
-        32940292,
-        29949333,
-        29648000,
-        27197834
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 1,
@@ -2349,18 +1343,6 @@
         "200": 10
       },
       "matches": 0,
-      "latencies": [
-        28874709,
-        25595875,
-        27323667,
-        34336958,
-        28892542,
-        27443459,
-        36970792,
-        36356417,
-        29281208,
-        34090292
-      ],
       "customStats": {},
       "counters": {},
       "concurrency": 0,
@@ -2368,4 +1350,429 @@
       "scenariosAvoided": 0
     }
   ]
+};
+  </script>
+
+  <style>
+      h1 {
+        line-height: 200%;
+      }
+
+      body {
+          background-color: #fcfcfc;
+      }
+
+      .container {
+          width: 100%;
+          min-width: 960px;
+      }
+  </style>
+
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="row" id="header">
+  <div class="col-lg-4 col-lg-offset-4">
+    <pre style="font-size: 5pt; background-color: #fcfcfc; border: none;">
+            _   _ _ _                                                _
+  __ _ _ __| |_(_) | | ___ _ __ _   _      _ __ ___ _ __   ___  _ __| |_
+ / _` | '__| __| | | |/ _ \ '__| | | |    | '__/ _ \ '_ \ / _ \| '__| __|
+| (_| | |  | |_| | | |  __/ |  | |_| |    | | |  __/ |_) | (_) | |  | |_
+ \__,_|_|   \__|_|_|_|\___|_|   \__, |    |_|  \___| .__/ \___/|_|   \__|
+                                |___/              |_|
+
+    </pre>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="text-center" id="page-title">Test run on <span id="timestamp">date</span></h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-3">
+    <p><strong>Summary</strong></p>
+    <table class="table table-bordered table-hover table-condensed">
+      <tbody>
+        <tr>
+          <td>Test duration</td>
+          <td><span id="testDuration">0</span> sec</td>
+        </tr>
+        <tr>
+          <td>Scenarios created</td>
+          <td><span id="scenariosCreated">0</span></td>
+        </tr>
+
+        <tr>
+          <td>Scenarios completed</td>
+          <td><span id="scenariosCompleted">0</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-lg-5" id="scenarioCountsContainer">
+    <div>
+      <strong>Scenario counts:</strong>
+
+      <p></p>
+
+      <table class="table table-bordered table-hover table-condensed" id="scenarioCounts">
+      </table>
+    </div>
+  </div>
+
+  <div class="col-lg-1">
+    <div id="codesContainer">
+      <strong>Codes</strong>
+
+      <p></p>
+
+      <table class="table table-bordered table-hover table-condensed" id="codes">
+      </table>
+    </div>
+  </div>
+
+  <div class="col-lg-3">
+    <div id="errorsContainer">
+      <strong>Errors</strong>
+
+      <p></p>
+
+      <table class="table table-bordered table-hover table-condensed" id="errors">
+      </table>
+    </div>
+  </div>
+</div> <!-- /.row -->
+
+<div class="row">
+  <div class="text-center col-lg-12">
+    <h2>Charts</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="latency-histogram text-center col-lg-12"></div>
+</div>
+
+<div class="row">
+  <div class="latency text-center col-lg-12"></div>
+</div>
+
+<div class="latency-legend"></div>
+
+<div class="row">
+
+</div>
+
+<div class="row">
+  <div class="concurrency text-center col-lg-12"></div>
+</div>
+
+<div class="row">
+  <div class="rps-mean text-center col-lg-12"></div>
+</div>
+<div class="row">
+  <div class="rps-count text-center col-lg-12"></div>
+</div>
+
+<div class="row">
+  <div class="codes-line text-center col-lg-12"></div>
+</div>
+<div class="row">
+  <div class="errors-line text-center col-lg-12"></div>
+</div>
+
+
+  
+
+
+</div>
+
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2">
+    <h3 class="text-center">Raw report data</h3>
+    <p>This is the raw JSON stats output that the report was generated from.</p>
+    <div id="editor">
+    </div>
+  </div>
+</div>
+
+<script>
+var editor = ace.edit("editor");
+editor.getSession().setMode("ace/mode/javascript");
+editor.setValue(JSON.stringify(Report, null, 2));
+editor.gotoLine(1);editor.setHighlightActiveLine(false);
+
+var l = _;
+
+$('#timestamp').html(moment(Report.aggregate.timestamp).format('DD MMM YYYY HH:mm:SS'));
+$('#testDuration').html(l.size(Report.intermediate) * 10);
+$('#scenariosCompleted').html(Report.aggregate.scenariosCompleted);
+$('#scenariosCreated').html(Report.aggregate.scenariosCreated);
+
+var markers = [];
+if(l.size(Report.phases) > 0) {
+  markers = l.foldl(Report.phases, function(acc, phase, index) {
+    var label = phase.name || 'Phase ' + (index + 1);
+    var timestamp = (index === 0) ? 0 : Report.phases[index - 1].duration + acc[index - 1].timestamp;
+
+    acc.push({
+      timestamp: timestamp,
+      label: label
+    });
+
+    return acc;
+  }, []);
 }
+
+if (l.size(Report.aggregate.scenarioCounts) > 0) {
+  l.each(Report.aggregate.scenarioCounts, function(count, name) {
+    var $tdName = $('<td>' + name + '</td>');
+    var percentage = Math.round(count / Report.aggregate.scenariosCreated * 100 * 1000) / 1000;
+    var $tdCount = $('<td>' + count + ' (' + percentage + '%)' + '</td>');
+    var $el = $('<tr></tr>')
+      .append($tdName)
+      .append($tdCount)
+      .appendTo($('#scenarioCounts'));
+  });
+} else {
+  $('#scenarioCountsContainer').hide();
+}
+
+if (l.size(Report.aggregate.codes) > 0) {
+  l.each(Report.aggregate.codes, function(count, code) {
+    var anchor = '';
+    if (code >= 100 && code < 200) {
+      anchor = '#1xx_Informational';
+    } else if (code >= 200 && code < 300) {
+      anchor = '#2xx_Success';
+    } else if (code >= 300 && code < 400) {
+      anchor = '#3xx_Redirection';
+    } else if (code >= 400 && code < 500) {
+      anchor = '#4xx_Client_Error';
+    } else if (code >= 500 && code < 600) {
+      anchor = '#5xx_Server_Error';
+    }
+
+    var $a = $('<a>' + code + '</a>').attr('href', 'https://en.wikipedia.org/wiki/List_of_HTTP_status_codes' + anchor);
+    var $td = $('<td></td>').append($a);
+    var $el = $('<tr></tr>')
+      .append($td)
+      .append($('<td>' + count + '</td>'))
+      .appendTo($('#codes'));
+  });
+} else {
+  $('#codesContainer').hide();
+}
+
+if (l.size(Report.aggregate.errors) > 0) {
+  l.each(Report.aggregate.errors, function(count, code) {
+    var $el = $('<tr></tr>')
+      .append($('<td>' + code + '</td>'))
+      .append($('<td>' + count + '</td>'))
+      .appendTo($('#errors'));
+  });
+} else {
+  $('#errorsContainer > p').html('&#10004; Test completed without network or OS errors.');
+}
+
+var histogramData = l.map(Report.aggregate.latency, function(v, k) { return {bin: k, value: v} });
+
+MG.data_graphic({
+  chart_type: 'bar',
+  x_label: 'Percentile',
+  y_label: '(ms)',
+  animate_on_load: true,
+  title: 'Overall Latency Distribution',
+  description: 'Distribution of all observed response latencies',
+  target: '.latency-histogram',
+  data: histogramData,
+  x_accessor: 'bin',
+  y_accessor: 'value',
+  binned: true,
+  height: 250,
+  interpolate: 'monotone',
+  padding_percentage: 0,
+  bar_orientation: 'vertical',
+  width: 450
+});
+
+var chartData = l.map(
+  window.Report.intermediate,
+  function(o,i) {
+    return {
+      timestamp: i*10+10,
+
+      rpsMean: o.rps.mean,
+      rpsCount: o.rps.count,
+      concurrency: o.concurrency,
+      latencyMax: o.latency.max,
+      latencyp99: o.latency.p99,
+      latencyp95: o.latency.p95,
+      latencyMedian: o.latency.median,
+      latencyMin: o.latency.min
+    }
+  });
+
+//
+// Response codes
+//
+
+if (l.size(Report.aggregate.codes) > 0) {
+  var codesData = l.foldl(Report.intermediate, function(acc, o, i) {
+    var res = {};
+    res.timestamp = i*10+10;
+    l.each(o.codes, function(count, code) {
+      res[code] = count;
+    });
+    acc.push(res);
+    return acc;
+  }, []);
+  var uniqueCodes = l.foldl(Report.intermediate, function(acc, o) {
+    l.each(o.codes, function(count, code) {
+      if (l.indexOf(acc, code) === -1) {
+        acc.push(code);
+      }
+    });
+    return acc;
+  }, []);
+
+  MG.data_graphic({
+    x_label: 'Time',
+    y_label: 'Count',
+    title: 'HTTP codes',
+    description: 'Occurence of HTTP response codes',
+    target: '.codes-line',
+    data: codesData,
+    x_accessor: 'timestamp',
+    y_accessor: uniqueCodes,
+    legend: uniqueCodes,
+    right: 50,
+    chart_type: 'line',
+    area: false,
+    markers: markers,
+    width: 900
+  });
+}
+
+//
+// Errors
+//
+
+if (l.size(Report.aggregate.errors) > 0) {
+  var errorData = l.foldl(Report.intermediate, function(acc, o, i) {
+    var res = {};
+    res.timestamp = i*10+10;
+    l.each(o.errors, function(count, name) {
+      res[name] = count;
+    });
+    acc.push(res);
+    return acc;
+  }, []);
+  var uniqueErrors = l.foldl(Report.intermediate, function(acc, o) {
+    l.each(o.errors, function(count, name) {
+      if (l.indexOf(acc, name) === -1) {
+        acc.push(name);
+      }
+    });
+    return acc;
+  }, []);
+
+  MG.data_graphic({
+    title: 'Error Codes',
+    description: 'Occurence of error codes',
+    target: '.errors-line',
+    data: errorData,
+    x_accessor: 'timestamp',
+    y_accessor: uniqueErrors,
+    chart_type: 'line',
+    area: false,
+    markers: markers
+  });
+
+}
+
+//
+// Latency
+//
+MG.data_graphic({
+  chart_type: 'line',
+  x_label: 'Time',
+  y_label: '(ms)',
+  animate_on_load: true,
+  area: false,
+  title: "Latency At Intervals",
+  description: "Latency values at different points during the test run",
+  data: chartData,
+  target: '.latency',
+  width: 900,
+  x_accessor: 'timestamp',
+  y_accessor: ['latencyMin', 'latencyMedian', 'latencyp95', 'latencyMax'],
+  legend: ['min', 'p50', 'p95', 'max'],
+  //legend_target: '.latency-legend',
+  right: 50,
+  interpolate: 'monotone',
+  mouseover: function(d, i) {
+  },
+  markers: markers
+        });
+
+            MG.data_graphic({
+            animate_on_load: true,
+            area: false,
+            y_label: 'Count',
+            x_label: 'Time',
+            title: 'Concurrent users',
+            description: 'Concurrent users',
+            data: chartData,
+            target: '.concurrency',
+            x_accessor: 'timestamp',
+            y_accessor: ['concurrency'],
+            interpolate: 'monotone',
+            markers: markers,
+            width: 900
+            });
+
+MG.data_graphic({
+  animate_on_load: true,
+  area: false,
+  y_label: 'Count',
+  x_label: 'Time',
+  title: 'Mean RPS',
+  description: 'Mean requests per second',
+  data: chartData,
+  target: '.rps-mean',
+  x_accessor: 'timestamp',
+  y_accessor: ['rpsMean'],
+  interpolate: 'monotone',
+  markers: markers,
+  width: 900
+});
+
+MG.data_graphic({
+  animate_on_load: true,
+  area: false,
+  y_label: 'Count',
+  x_label: 'Time',
+  title: 'RPS Count',
+  description: 'Count of requests per second',
+  data: chartData,
+  target: '.rps-count',
+  x_accessor: 'timestamp',
+  y_accessor: ['rpsCount'],
+  interpolate: 'monotone',
+  markers: markers,
+  width: 900
+});
+</script>
+<div id="footer">
+  <footer>This report was created with <a href="https://artillery.io">Artillery</a> - free open-source load-testing for HTTP and WebSockets</footer>
+</div>
+</body>
+</html>
