@@ -1,0 +1,27 @@
+config:
+  target: http://128.134.244.183:8084
+  payload:
+    path: "../csv/ratings_test_50k.csv"
+    fields:
+      - "content"
+  phases:
+    - duration: 333
+      arrivalRate: 3
+      name: Warm up
+    - duration: 120
+      arrivalRate: 3
+      rampTo: 100
+      name: Ramp up load
+    - duration: 600
+      arrivalRate: 100
+      name: Sustained load
+scenarios:
+  - name: "just get hash"
+    flow:
+      - post:
+          url: "/io/post"
+          json:
+            content: "{{ content }}"
+      - think: 1
+      - get:
+          url: "/io/posts"

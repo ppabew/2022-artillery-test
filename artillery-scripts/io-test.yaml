@@ -22,3 +22,6 @@ scenarios:
           url: "/io/post"
           json:
             content: "{{ content }}"
+      - think: 1
+      - get:
+          url: "/io/posts"
